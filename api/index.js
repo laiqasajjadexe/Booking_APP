@@ -37,12 +37,23 @@ mongoose.connection.on("connected",()=>{
 //middleware cause we can't directly send json object to json server
 app.use(express.json());
 
-//middlewares
+//middlewares used to reach the requests and send back response before sending anything to user
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
 
+app.use((err,req,res,next)=> {
+    const errorStatus=err.status||500;
+    const errorMessage=err.message||"Something went wrong!";
+    return res.status(errorStatus).json({
+        success:false,
+        status:errorStatus,
+        message:errorMessage,
+        stack:err.stack,
+    });
+
+});
 
 //start the express server and listens for the incoming requests
 app.listen(8900, ()=>{
