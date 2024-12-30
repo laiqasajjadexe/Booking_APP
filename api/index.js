@@ -5,8 +5,10 @@ import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
+import cookieParser from "cookie-parser";
 
 const app=express();
+
 dotenv.config();
 
 //api creation or sending the response to a request
@@ -33,6 +35,8 @@ mongoose.connection.on("disconnected",()=>{
 mongoose.connection.on("connected",()=>{
     console.log("MongoDb connected again")
 });*/
+
+app.use(cookieParser()); //middlewar for cookie
 
 //middleware cause we can't directly send json object to json server
 app.use(express.json());

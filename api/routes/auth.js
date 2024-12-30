@@ -1,16 +1,11 @@
-//file for authentication , will include cookies, json tokens etc
-import express from "express";
+import express from "express"; 
+import { register, login } from "../controllers/authController.js";
 
 const router =express.Router();
 
-//route for handling the get request at auth endpoint
-router.get("/", (req,res) =>{
-    res.send("Hello,this is the Auth endpoint");
-});
-
 //route for handling the get request at auth/registers endpoint
-router.get("/registers", (req,res) =>{
-    res.send("Hello,this is the Auth registers endpoint");
-});
+router.post("/register", register);
+
+router.post("/login", login);
 
 export default router;
