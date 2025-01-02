@@ -1,0 +1,63 @@
+.navbar {
+    height: 60px; /* Slightly taller for better visibility */
+    background-color: #003580; /* Rich blue background */
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.navContainer {
+    width: 100%;
+    max-width: 1024px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* Adds some horizontal padding */
+}
+
+.logo {
+    font-weight: 700; /* Bold font for better emphasis */
+    font-size: 24px; /* Larger size for visibility */
+    cursor: pointer;
+}
+
+.navItems {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+.navButton {
+    margin-left: 20px; /* Consistent spacing */
+    border: none;
+    padding: 10px 20px; /* Larger padding for clickability */
+    cursor: pointer;
+    color: white; /* White text for contrast */
+    background-color: #0071c2; /* Distinct blue for buttons */
+    border-radius: 5px; /* Rounded edges for a modern look */
+    font-size: 14px; /* Comfortable size */
+    font-weight: 500; /* Slightly bolder text */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+}
+
+.navButton:hover {
+    background-color: #005bb5; /* Darker shade for hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+.navButton:active {
+    transform: scale(0.95); /* Press-in effect on click */
+}
+
+.navButton:first-of-type {
+    background-color: #febb02; /* Unique yellow for the "Register" button */
+    color: #003580; /* Matches the Navbar background */
+}
+
+.navButton:first-of-type:hover {
+    background-color: #e5a702; /* Slightly darker yellow on hover */
+}
+
+.navButton:first-of-type:active {
+    transform: scale(0.95); /* Consistent press-in effect */
+}

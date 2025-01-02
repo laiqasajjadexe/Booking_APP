@@ -1,0 +1,139 @@
+.listContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.listWrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.listSearch {
+    flex: 1;
+    background-color: #febb02;
+    padding: 20px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lsTitle {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.lsItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.lsItem > label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.lsItem > input {
+    height: 35px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.lsItem > input:focus {
+    border-color: #0071c2;
+}
+
+.lsItem > span {
+    height: 35px;
+    padding: 8px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.lsItem > span:hover {
+    background-color: #f0f0f0;
+}
+
+.lsOptions {
+    padding: 10px 0;
+}
+
+.lsOptionItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 14px;
+    align-items: center;
+}
+
+.lsOptionInput {
+    width: 60px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.lsOptionInput:focus {
+    border-color: #0071c2;
+}
+
+.listSearch > button {
+    padding: 12px;
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.listSearch > button:hover {
+    background-color: #005fa3;
+}
+
+.listResult {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .listWrapper {
+        flex-direction: column;
+    }
+
+    .listSearch {
+        position: static;
+    }
+}
